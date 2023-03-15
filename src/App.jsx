@@ -44,7 +44,7 @@ prevent();
 
 function getResponseFromOpenai() {
   let configuration = new Configuration({
-    apiKey: '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',
+    apiKey: 'api-key',
   });
 
   let openai = new OpenAIApi(configuration);
