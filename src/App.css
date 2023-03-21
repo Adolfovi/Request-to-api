@@ -1,0 +1,138 @@
+.results-container{
+    display: flex;
+    justify-content: center;
+}
+
+.logo-container{
+    padding: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container img{
+    width: 12rem;
+}
+
+.form-block{
+    position: fixed;
+    background-color: red;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    top: 2rem;
+    height: 26rem;
+    align-items: center;
+    padding: 1rem;
+}
+
+.form-block form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 10rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.form-block form input:nth-child(1){
+    margin: 0rem;
+    width: 14rem;
+    font-size: 1.2rem;
+    border: 0;
+    padding: 0.4rem;
+    border-radius: 0.2rem;
+}
+
+.form-block form input:nth-child(2){
+    margin-top: 1rem;
+    font-size: 2rem;
+    width: 9rem;
+    border: 0;
+    border-radius: 0.2rem;
+    padding: 0.4rem;
+}
+
+.results-block{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.result-block{
+    background-color: red;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0.4rem 0rem;
+}
+
+.date-block{
+
+}
+
+.requestDate-block{
+    display: flex;
+    justify-content: space-between;
+    background-color: orange;
+    padding: 0.4rem;
+}
+
+.request-block{
+    width: 15rem;
+}
+
+.response-block{
+    padding: 0.8rem 0.4rem;
+}
+
+.loading{
+    display: flex;
+    justify-content: center;
+}
+
+.loading-container{
+    position: relative;
+    top: -3rem;
+    height: 2rem;
+}
+
+.loading{
+    font-size: 2rem;
+}
+
+.arrow-container{
+    display: flex;
+    justify-content: center;
+    margin-left: 0.8rem;
+    position: relative;
+    top: 3.4rem;
+    right: -10rem;
+    width: 4rem;
+    height: 25rem;
+    background-color: black;
+    align-items: center;
+}
+
+
+.prompt{
+    margin-right: 0.4rem;
+}
+
+.hidden{
+    left: -14.8rem;
+}
+
+.left{
+    left: -17rem;
+}
+
+.normal-rotation{
+    transform: rotate(0deg) !important;
+}
+
+.inverse-rotation{
+    transform: rotate(180deg) !important;
+}
