@@ -1,3 +1,7 @@
+body{
+    background-color: #ffcb9a;
+}
+
 .results-container{
     display: flex;
     justify-content: center;
@@ -16,7 +20,7 @@
 
 .form-block{
     position: fixed;
-    background-color: red;
+    background-color: #ff7b00;
     color: white;
     display: flex;
     justify-content: center;
@@ -37,6 +41,10 @@
     margin-top: 1rem;
 }
 
+.form-block form input{
+    cursor: pointer;
+}
+
 .form-block form input:nth-child(1){
     margin: 0rem;
     width: 14rem;
@@ -53,6 +61,8 @@
     border: 0;
     border-radius: 0.2rem;
     padding: 0.4rem;
+    background-color: #de4b00;
+    color: white;
 }
 
 .results-block{
@@ -62,11 +72,13 @@
 }
 
 .result-block{
-    background-color: red;
+    background-color: #f0903c;
     width: 20rem;
     display: flex;
     flex-direction: column;
-    margin: 0.4rem 0rem;
+    margin: 1.4rem 0rem;
+    box-shadow: 3px 2px 3px #914400;
+    border-radius: 0.4rem;
 }
 
 .date-block{
@@ -76,8 +88,9 @@
 .requestDate-block{
     display: flex;
     justify-content: space-between;
-    background-color: orange;
+    background-color: #ff6e00;
     padding: 0.4rem;
+    border-radius: 0.4rem 0.4rem 0rem 0rem;
 }
 
 .request-block{
@@ -85,7 +98,7 @@
 }
 
 .response-block{
-    padding: 0.8rem 0.4rem;
+    padding: 0.8rem 0.8rem;
 }
 
 .loading{
@@ -112,8 +125,9 @@
     right: -10rem;
     width: 4rem;
     height: 25rem;
-    background-color: black;
+    background-color: #a44d00;
     align-items: center;
+    cursor: pointer;
 }
 
 

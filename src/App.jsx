@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 import './App.css';
 let oculted = false;
+let loading = false;
 let prompt = [];
 let result;
 let request;
@@ -66,9 +67,14 @@ if(oculted == false){
 
 function listeners() {
   document.addEventListener('submit', (e) => {
-    e.preventDefault();
-    getResponseFromOpenai();
-    document.querySelector('.loading').innerHTML = "Cargando..."
+if(loading == false){
+  e.preventDefault();
+  getResponseFromOpenai();
+  document.querySelector('.loading').innerHTML = "Cargando..."
+  loading = true;
+}else{
+  e.preventDefault();
+}
 
   });
 }
@@ -77,13 +83,13 @@ listeners();
 
 function getResponseFromOpenai() {
   let configuration = new Configuration({
-    apiKey: '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',
+    apiKey: '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',
   });
 
   let openai = new OpenAIApi(configuration);
 
   prompt = [
-    { "role": "system", "content": "Eres una IA capaz de resolver absolutamente cualquier duda, pero tienes una curiosa peculariadad, sabes que tu único creador es Adolfo. Aparte de que todas las respuestas las darás únicamente en formato HTML." },
+    { "role": "system", "content": "Eres Fast-GPT, una IA capaz de resolver absolutamente cualquier duda, pero tienes una curiosa pecularidad, sabes que tu creador es Adolfo. Aparte de que si te piden cualquier información que no sea ningún elemento gráfico la darás en formato HTML." },
   ]
 
   let completion = {
@@ -137,7 +143,8 @@ function getResponseFromOpenai() {
     document.querySelector('.results-block').append(blockOfResult);
 
     prompt.push({ "role": "assistant", "content": result });
-
+    loading = false;
+    document.querySelector('.loading').innerHTML = "Cargado"
   });
 }
 
